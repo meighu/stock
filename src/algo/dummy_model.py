@@ -17,6 +17,7 @@ def create_features(df_stock, nlags=10):
     return df
 
 
+
 def create_X_Y(df_lags):
     X = df_lags.drop('lags_0', axis=1)
     Y = df_lags[['lags_0']]
