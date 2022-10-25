@@ -16,9 +16,11 @@ def get_stock_value(ticker):
     bl = create_business_logic()
     prediction = bl.do_predictions_for(ticker)
     if si.get_data(ticker) > prediction:
-        return f'{'SELL'}\n'
+        return f'{prediction}\n'
+        print('SELL')
     if si.get_data(ticker) < prediction:
-        return f'{'BUY'}\n'
+        return f'{prediction}\n'
+        print('BUY')
 
 
 @app.route('/getversion/')
