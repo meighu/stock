@@ -20,8 +20,8 @@ def create_features(df_stock, nlags=10):
 
 
 def create_X_Y(df_lags):
-    X = df_lags.drop('lag_0', axis=1)
-    Y = df_lags[['lag_0']]
+    X = df_lags.drop('lags_0', axis=1)
+    Y = df_lags[['lags_0']]
     return X, Y
 
 
@@ -48,7 +48,7 @@ class Stock_model(BaseEstimator, TransformerMixin):
         print(df_features)
         df_features, Y = create_X_Y(df_features)
         predictions = self.lr.predict(df_features)
-        close = df_features['lag_1'][-1]
+        close = df_features['lags_1'][-1]
         tomorrow_close = predictions.flatten()[-1]
         if close >= tomorrow_close:
             return 'SELL'
