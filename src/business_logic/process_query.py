@@ -12,6 +12,8 @@ def create_business_logic():
     data_fetcher = get_last_stock_price
     return BusinessLogic(Stock_model(data_fetcher))
 
+def get_value_logic
+    data_fetcher2 = get_last_stock_price(tic
 
 class BusinessLogic:
 
