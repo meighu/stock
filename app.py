@@ -20,8 +20,8 @@ def get_stock_value(ticker):
     return f'{prediction}\n'
 
 @app.route('/get_stock_val/<ticker>', methods=['GET'])
-dl = get_last_stock_price(ticker, last=False)
-print(dl)
+get_last_stock_price(ticker, last=False)
+
 
 
 
