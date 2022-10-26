@@ -16,14 +16,8 @@ def get_stock_value(ticker):
     bl = create_business_logic()
     prediction = bl.do_predictions_for(ticker)
 
-    return f'{prediction}\n'
+    return f'{'Buy'}\n'
 
-p_stock = get_stock_value(ticker)
-
-if p_stock > prediction:
-    print('BUY')
-else:
-    print('SELL')
 
 
 
