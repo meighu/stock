@@ -24,7 +24,7 @@ def display_stock_value(ticker):
     current_value = dl
     return f'{current_value}\n'
 
-print(current_value)
+print(dl)
 
 
 
