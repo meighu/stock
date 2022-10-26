@@ -19,7 +19,7 @@ def get_stock_value(ticker):
 
     return f'{prediction}\n'
 
-dl = get_last_stock_price(ticker, last: bool = False)
+dl = get_last_stock_price(ticker, last=False)
 print(dl)
 
 
