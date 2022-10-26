@@ -1,7 +1,7 @@
 from flask import Flask
 import git
 from src.business_logic.process_query import create_business_logic
-from src.IO.get_data_from_yahoo import get_current_stock_price
+from src.IO.get_data_from_yahoo import get_last_stock_price
 app = Flask(__name__)
 
 
@@ -19,13 +19,8 @@ def get_stock_value(ticker):
 
     return f'{prediction}\n'
 
-def display_stock_value(ticker):
-    dl = get_current_stock_price()
-    current_value = dl
-    return f'{current_value}\n'
-
+dl = get_last_stock_price(ticker, last: bool = False)
 print(dl)
-
 
 
 
