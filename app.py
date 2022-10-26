@@ -15,10 +15,8 @@ def hello():
 def get_stock_value(ticker):
     bl = create_business_logic()
     prediction = bl.do_predictions_for(ticker)
-    if prediction > data_fetcher:
-        return f'{"Buy"}\n'
-    else:
-        return f'{"sell"}\n'
+
+    return f'{'prediction'}\n'
 
 
 
